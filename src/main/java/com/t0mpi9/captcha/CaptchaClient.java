@@ -1,10 +1,8 @@
 package com.t0mpi9.captcha;
 
-import cn.iautos.captcha.config.AbstractCaptchaConfig;
-import cn.iautos.captcha.config.DefaultCaptchaConfig;
 import com.madgag.gif.fmsware.AnimatedGifEncoder;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import com.t0mpi9.captcha.config.AbstractCaptchaConfig;
+import com.t0mpi9.captcha.config.DefaultCaptchaConfig;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -21,8 +19,6 @@ import java.util.concurrent.ThreadLocalRandom;
  * @author zhubenle
  */
 public class CaptchaClient {
-
-    private final static Logger logger = LoggerFactory.getLogger(CaptchaClient.class);
 
     private final static int MAX_RGB = 255;
     private final static int OVAL_COUNT = 2;

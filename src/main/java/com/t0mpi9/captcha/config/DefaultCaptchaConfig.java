@@ -1,6 +1,7 @@
 package com.t0mpi9.captcha.config;
 
-import cn.iautos.captcha.CaptchaClient;
+
+import com.t0mpi9.captcha.CaptchaClient;
 
 /**
  * <br/>

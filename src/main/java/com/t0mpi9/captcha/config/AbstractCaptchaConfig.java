@@ -1,8 +1,7 @@
 package com.t0mpi9.captcha.config;
 
-import cn.iautos.captcha.CaptchaClient;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
+import com.t0mpi9.captcha.CaptchaClient;
 
 import java.awt.*;
 
@@ -13,8 +12,6 @@ import java.awt.*;
  * @author zhubenle
  */
 public abstract class AbstractCaptchaConfig {
-
-    private final static Logger LOGGER = LoggerFactory.getLogger(AbstractCaptchaConfig.class);
 
     private Font[] font3D;
     private String captcha;
@@ -50,9 +47,8 @@ public abstract class AbstractCaptchaConfig {
             Font jazzScript2 = Font.createFont(Font.TRUETYPE_FONT, CaptchaClient.class.getResourceAsStream("/JazzScript2-Caps.ttf"));
             Font arvo = Font.createFont(Font.TRUETYPE_FONT, CaptchaClient.class.getResourceAsStream("/Arvo-BoldItalic.ttf"));
             this.font3D = new Font[]{asimovOu, euroBold, kgSecondChancesSketch, princetownStd, adieresis, frederickatheGreat, jazzScript2, arvo};
-
         } catch (Exception e) {
-            LOGGER.error("载入3D字体异常字体异常", e);
+            throw new RuntimeException(e);
         }
     }
 
