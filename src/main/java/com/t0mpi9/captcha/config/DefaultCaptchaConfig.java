@@ -23,7 +23,7 @@ public class DefaultCaptchaConfig extends AbstractCaptchaConfig{
 
     @Override
     public CaptchaClient.Type type() {
-        return CaptchaClient.Type.GIF_3D;
+        return CaptchaClient.Type.MIX_GIF;
     }
 
     @Override

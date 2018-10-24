@@ -184,7 +184,7 @@ public class CaptchaClient {
     private void drawYawp(int w, int h, Type type, BufferedImage image) {
         ThreadLocalRandom random = ThreadLocalRandom.current();
         float yawpRate = 0.05f;
-        if (!(Type.MIX2.equals(type) || Type.MIX_GIF.equals(type) || Type.STATIC_3D.equals(type) || Type.GIF_3D.equals(type))) {
+        if (!(Type.STATIC_MIX.equals(type) || Type.MIX_GIF.equals(type) || Type.STATIC_3D.equals(type) || Type.GIF_3D.equals(type))) {
             // 噪声率
             yawpRate = getRandomDrawPoint();
         }
@@ -262,7 +262,7 @@ public class CaptchaClient {
 
         if (Type.GIF_3D.equals(type) || Type.STATIC_3D.equals(type)) {
             return getFont(size, style);
-        } else if (Type.MIX2.equals(type) || Type.MIX_GIF.equals(type)) {
+        } else if (Type.STATIC_MIX.equals(type) || Type.MIX_GIF.equals(type)) {
             if (random.nextBoolean()) {
                 return new Font(name, style, size);
             } else {
@@ -406,7 +406,7 @@ public class CaptchaClient {
         STATIC_3D("3D中空自定义字体"),
         GIF("普通动态GIF"),
         GIF_3D("3D动态GIF"),
-        MIX2("普通字体和3D字体混合"),
+        STATIC_MIX("普通字体和3D字体混合"),
         MIX_GIF("混合动态GIF");
         private String desc;
 
